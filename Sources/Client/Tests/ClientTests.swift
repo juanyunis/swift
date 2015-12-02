@@ -12,6 +12,6 @@ import XCTest
 class ClientTests: XCTestCase {
 
     func test__run_test_suite() {
-        XCTAssertTrue(true)
+        XCTAssertTrue(__forTestingPurposes())
     }
 }

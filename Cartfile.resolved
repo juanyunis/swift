@@ -1,0 +1,2 @@
+github "Anviking/Decodable" "v0.3.3"
+github "tidwall/SwiftWebSocket" "v2.3.0"

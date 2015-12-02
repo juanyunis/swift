@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "65E186501C0F5923005D891F"
-               BuildableName = "tvOS Client.framework"
+               BuildableName = "Tinode.framework"
                BlueprintName = "tvOS Client"
                ReferencedContainer = "container:Tinode.xcodeproj">
             </BuildableReference>
@@ -44,7 +44,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "65E186501C0F5923005D891F"
-            BuildableName = "tvOS Client.framework"
+            BuildableName = "Tinode.framework"
             BlueprintName = "tvOS Client"
             ReferencedContainer = "container:Tinode.xcodeproj">
          </BuildableReference>
@@ -66,7 +66,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "65E186501C0F5923005D891F"
-            BuildableName = "tvOS Client.framework"
+            BuildableName = "Tinode.framework"
             BlueprintName = "tvOS Client"
             ReferencedContainer = "container:Tinode.xcodeproj">
          </BuildableReference>
@@ -84,7 +84,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "65E186501C0F5923005D891F"
-            BuildableName = "tvOS Client.framework"
+            BuildableName = "Tinode.framework"
             BlueprintName = "tvOS Client"
             ReferencedContainer = "container:Tinode.xcodeproj">
          </BuildableReference>

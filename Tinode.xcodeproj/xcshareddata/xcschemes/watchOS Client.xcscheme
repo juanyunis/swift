@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "65E186431C0F5912005D891F"
-               BuildableName = "watchOS Client.framework"
+               BuildableName = "Tinode.framework"
                BlueprintName = "watchOS Client"
                ReferencedContainer = "container:Tinode.xcodeproj">
             </BuildableReference>
@@ -47,7 +47,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "65E186431C0F5912005D891F"
-            BuildableName = "watchOS Client.framework"
+            BuildableName = "Tinode.framework"
             BlueprintName = "watchOS Client"
             ReferencedContainer = "container:Tinode.xcodeproj">
          </BuildableReference>
@@ -65,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "65E186431C0F5912005D891F"
-            BuildableName = "watchOS Client.framework"
+            BuildableName = "Tinode.framework"
             BlueprintName = "watchOS Client"
             ReferencedContainer = "container:Tinode.xcodeproj">
          </BuildableReference>
