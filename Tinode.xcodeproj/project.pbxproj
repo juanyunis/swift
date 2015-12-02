@@ -10,10 +10,7 @@
 		65E186321C0F58FC005D891F /* Tinode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E186271C0F58FC005D891F /* Tinode.framework */; };
 		65E1865B1C0F5924005D891F /* Tinode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E186511C0F5923005D891F /* Tinode.framework */; };
 		65E186771C0F5930005D891F /* Tinode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E1866D1C0F592F005D891F /* Tinode.framework */; };
-		65E186901C0F5995005D891F /* Client.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 65E186891C0F5995005D891F /* Client.xcconfig */; };
-		65E186911C0F5995005D891F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65E1868A1C0F5995005D891F /* Info.plist */; };
 		65E186921C0F5995005D891F /* TinodeClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 65E1868B1C0F5995005D891F /* TinodeClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		65E186941C0F5995005D891F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65E1868E1C0F5995005D891F /* Info.plist */; };
 		65E186961C0F5AF5005D891F /* TinodeClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 65E1868B1C0F5995005D891F /* TinodeClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		65E186971C0F5AF6005D891F /* TinodeClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 65E1868B1C0F5995005D891F /* TinodeClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		65E186981C0F5AF6005D891F /* TinodeClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 65E1868B1C0F5995005D891F /* TinodeClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -264,6 +261,7 @@
 				65E1862D1C0F58FC005D891F /* Sources */,
 				65E1862E1C0F58FC005D891F /* Frameworks */,
 				65E1862F1C0F58FC005D891F /* Resources */,
+				65443A0B1C0F6FEB00C1E0F4 /* Carthage Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -354,6 +352,7 @@
 				65E186721C0F5930005D891F /* Sources */,
 				65E186731C0F5930005D891F /* Frameworks */,
 				65E186741C0F5930005D891F /* Resources */,
+				65443A091C0F6F8400C1E0F4 /* Carthage Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -427,9 +426,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65E186911C0F5995005D891F /* Info.plist in Resources */,
-				65E186901C0F5995005D891F /* Client.xcconfig in Resources */,
-				65E186941C0F5995005D891F /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +472,41 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		65443A091C0F6F8400C1E0F4 /* Carthage Copy Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/Mac/SwiftWebSocket.framework",
+			);
+			name = "Carthage Copy Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+			showEnvVarsInLog = 0;
+		};
+		65443A0B1C0F6FEB00C1E0F4 /* Carthage Copy Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftWebSocket.framework",
+			);
+			name = "Carthage Copy Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		65E186221C0F58FC005D891F /* Sources */ = {
