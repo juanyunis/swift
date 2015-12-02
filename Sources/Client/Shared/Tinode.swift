@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+internal func __forTestingPurposes() -> Bool {
+    return true
+}
