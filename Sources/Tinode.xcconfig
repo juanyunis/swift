@@ -1,0 +1,10 @@
+//
+//  Tinode.xcconfig
+//  Tinode
+//
+//  Created by Daniel Thorpe on 02/12/2015.
+//
+//
+
+ORG_IDENTIFIER = co.tinode
+PRODUCT_NAME = Tinode
