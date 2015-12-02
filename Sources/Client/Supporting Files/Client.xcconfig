@@ -1,0 +1,18 @@
+//
+//  Client.xcconfig
+//  Tinode
+//
+//  Created by Daniel Thorpe on 02/12/2015.
+//
+//
+
+#include "../../Tinode.xcconfig"
+
+CLIENT_VERSION = 0.1
+
+INFOPLIST_FILE = $(SRCROOT)/Sources/Client/Supporting Files/Info.plist
+IPHONEOS_DEPLOYMENT_TARGET = 9.0
+APPLICATION_EXTENSION_API_ONLY = YES
+DEFINES_MODULE = YES
+CLANG_ENABLE_CODE_COVERAGE = YES
+PRODUCT_BUNDLE_IDENTIFIER = $(ORG_IDENTIFIER).client
