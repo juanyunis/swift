@@ -3,6 +3,11 @@ platform :ios do
 
   desc "Runs all the tests"
   lane :test do
+    
+    carthage(
+      platform: "iOS"
+    )
+    
 
     scan(
       scheme: "iOS Client",
@@ -17,6 +22,10 @@ platform :mac do
   
   desc "Runs all the tests"
   lane :test do
+    
+    carthage(
+      platform: "Mac"
+    )    
 
     scan(
       scheme: "OS X Client",
