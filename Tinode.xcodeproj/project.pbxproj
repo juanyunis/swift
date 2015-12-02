@@ -24,6 +24,8 @@
 		65E186A11C0F5C33005D891F /* Tinode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E1869F1C0F5C33005D891F /* Tinode.swift */; };
 		65E186A21C0F5C33005D891F /* Tinode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E1869F1C0F5C33005D891F /* Tinode.swift */; };
 		65E186A31C0F5C52005D891F /* Tinode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E1869F1C0F5C33005D891F /* Tinode.swift */; };
+		65E186A51C0F6DBC005D891F /* SwiftWebSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E186A41C0F6DBC005D891F /* SwiftWebSocket.framework */; };
+		65E186A71C0F6DCE005D891F /* SwiftWebSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E186A61C0F6DCE005D891F /* SwiftWebSocket.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		65E1868D1C0F5995005D891F /* ClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientTests.swift; sourceTree = "<group>"; };
 		65E1868E1C0F5995005D891F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65E1869F1C0F5C33005D891F /* Tinode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tinode.swift; sourceTree = "<group>"; };
+		65E186A41C0F6DBC005D891F /* SwiftWebSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftWebSocket.framework; path = Carthage/Build/iOS/SwiftWebSocket.framework; sourceTree = "<group>"; };
+		65E186A61C0F6DCE005D891F /* SwiftWebSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftWebSocket.framework; path = Carthage/Build/Mac/SwiftWebSocket.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65E186A51C0F6DBC005D891F /* SwiftWebSocket.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65E186A71C0F6DCE005D891F /* SwiftWebSocket.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +135,7 @@
 				65E186871C0F5995005D891F /* Shared */,
 				65E1868C1C0F5995005D891F /* Tests */,
 				65E186881C0F5995005D891F /* Supporting Files */,
+				65E186A81C0F6DD3005D891F /* Dependencies */,
 				65E186281C0F58FC005D891F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -183,6 +190,15 @@
 			);
 			name = Tests;
 			path = Sources/Client/Tests;
+			sourceTree = "<group>";
+		};
+		65E186A81C0F6DD3005D891F /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				65E186A61C0F6DCE005D891F /* SwiftWebSocket.framework */,
+				65E186A41C0F6DBC005D891F /* SwiftWebSocket.framework */,
+			);
+			name = Dependencies;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -579,6 +595,10 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -635,6 +655,10 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1069,6 +1093,10 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				FRAMEWORK_VERSION = A;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1126,6 +1154,10 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				FRAMEWORK_VERSION = A;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
