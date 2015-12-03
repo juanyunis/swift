@@ -16,15 +16,3 @@ protocol MessageType {
 
 protocol ClientMessageType: MessageType, Encodable { }
 
-
-protocol UserInfoType {
-    typealias PublicInfo: Decodable, Encodable
-
-    var publicInfo: PublicInfo? { get set }
-
-    var privateInfo: PublicInfo? { get set }
-}
-
-
-
-

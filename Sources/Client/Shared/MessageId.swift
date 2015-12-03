@@ -26,7 +26,7 @@ struct MessageId: Equatable, CustomStringConvertible, StringLiteralConvertible, 
         description = value
     }
 
-    func encode() -> [String : AnyObject] {
+    func encode() -> Encoded {
         return ["id": description]
     }
 }

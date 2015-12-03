@@ -15,19 +15,21 @@ struct AccountMessage: ClientMessageType {
     let id: MessageId?
     let context: Context
     let auth: AnySequence<AuthenticationSchemeType>
+    let userInfo: UserInfo
 
-    init(id: MessageId? = .None, context: Context = .Current, auth: AnySequence<AuthenticationSchemeType>) {
+    init(id: MessageId? = .None, context: Context = .Current, auth: AnySequence<AuthenticationSchemeType>, userInfo: UserInfo) {
         self.id = id
         self.context = context
         self.auth = auth
+        self.userInfo = userInfo
     }
 
-    init(id: MessageId? = .None, context: Context = .Current, auth: AuthenticationSchemeType...) {
-        self.init(id: id, context: context, auth: AnySequence(auth))
+    init(id: MessageId? = .None, context: Context = .Current, auth: AuthenticationSchemeType..., userInfo: UserInfo = UserInfo(publicInfo: .None, privateInfo: .None)) {
+        self.init(id: id, context: context, auth: AnySequence(auth), userInfo: userInfo)
     }
 
-    init(id: MessageId? = .None, context: Context = .Current, basic: Authentication.Basic.UserPasswordPair) {
-        self.init(id: id, context: context, auth: Authentication.Basic(user: basic.user, password: basic.password))
+    init(id: MessageId? = .None, context: Context = .Current, basic: Authentication.Basic.UserPasswordPair, userInfo: UserInfo = UserInfo(publicInfo: .None, privateInfo: .None)) {
+        self.init(id: id, context: context, auth: Authentication.Basic(user: basic.user, password: basic.password), userInfo: userInfo)
     }
 
     func encode() -> Encoded {
@@ -39,14 +41,8 @@ struct AccountMessage: ClientMessageType {
         }
 
         result += context.encode()
-
         result["auth"] = auth.map { $0.encode() }
-
-
-        // TODO: defacs?
-
-        // TODO: UserInfo
-
+        result["init"] = userInfo.encode()
         return result
     }
 }

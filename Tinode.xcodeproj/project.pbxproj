@@ -40,6 +40,13 @@
 		65443A391C0FB92900C1E0F4 /* AuthenticationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A381C0FB92900C1E0F4 /* AuthenticationTests.swift */; };
 		65443A3A1C0FB92900C1E0F4 /* AuthenticationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A381C0FB92900C1E0F4 /* AuthenticationTests.swift */; };
 		65443A3B1C0FB92900C1E0F4 /* AuthenticationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A381C0FB92900C1E0F4 /* AuthenticationTests.swift */; };
+		65443A3D1C0FC3D000C1E0F4 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A3C1C0FC3D000C1E0F4 /* UserInfo.swift */; };
+		65443A3E1C0FC3D000C1E0F4 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A3C1C0FC3D000C1E0F4 /* UserInfo.swift */; };
+		65443A3F1C0FC3D000C1E0F4 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A3C1C0FC3D000C1E0F4 /* UserInfo.swift */; };
+		65443A401C0FC3D000C1E0F4 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A3C1C0FC3D000C1E0F4 /* UserInfo.swift */; };
+		65443A421C0FC59900C1E0F4 /* UserInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A411C0FC59900C1E0F4 /* UserInfoTests.swift */; };
+		65443A431C0FC59900C1E0F4 /* UserInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A411C0FC59900C1E0F4 /* UserInfoTests.swift */; };
+		65443A441C0FC59900C1E0F4 /* UserInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A411C0FC59900C1E0F4 /* UserInfoTests.swift */; };
 		65E186321C0F58FC005D891F /* Tinode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E186271C0F58FC005D891F /* Tinode.framework */; };
 		65E1865B1C0F5924005D891F /* Tinode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E186511C0F5923005D891F /* Tinode.framework */; };
 		65E186771C0F5930005D891F /* Tinode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E1866D1C0F592F005D891F /* Tinode.framework */; };
@@ -95,6 +102,8 @@
 		65443A2F1C0FB4F300C1E0F4 /* MessageIdTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageIdTests.swift; sourceTree = "<group>"; };
 		65443A331C0FB80300C1E0F4 /* Authenticaton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authenticaton.swift; sourceTree = "<group>"; };
 		65443A381C0FB92900C1E0F4 /* AuthenticationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationTests.swift; sourceTree = "<group>"; };
+		65443A3C1C0FC3D000C1E0F4 /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		65443A411C0FC59900C1E0F4 /* UserInfoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoTests.swift; sourceTree = "<group>"; };
 		65E186271C0F58FC005D891F /* Tinode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Tinode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		65E186311C0F58FC005D891F /* iOS ClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS ClientTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65E186441C0F5912005D891F /* Tinode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Tinode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -211,12 +220,13 @@
 		65E186871C0F5995005D891F /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				65E1869F1C0F5C33005D891F /* Tinode.swift */,
-				65443A171C0F8D9800C1E0F4 /* MessageType.swift */,
-				65443A1C1C0F97B200C1E0F4 /* Encodable.swift */,
 				65443A211C0F9B8900C1E0F4 /* Account.swift */,
-				65443A261C0F9ECA00C1E0F4 /* MessageId.swift */,
 				65443A331C0FB80300C1E0F4 /* Authenticaton.swift */,
+				65443A1C1C0F97B200C1E0F4 /* Encodable.swift */,
+				65443A261C0F9ECA00C1E0F4 /* MessageId.swift */,
+				65443A171C0F8D9800C1E0F4 /* MessageType.swift */,
+				65E1869F1C0F5C33005D891F /* Tinode.swift */,
+				65443A3C1C0FC3D000C1E0F4 /* UserInfo.swift */,
 			);
 			name = Shared;
 			path = Sources/Client/Shared;
@@ -241,6 +251,7 @@
 				65443A381C0FB92900C1E0F4 /* AuthenticationTests.swift */,
 				65E1868D1C0F5995005D891F /* ClientTests.swift */,
 				65443A2F1C0FB4F300C1E0F4 /* MessageIdTests.swift */,
+				65443A411C0FC59900C1E0F4 /* UserInfoTests.swift */,
 			);
 			name = Tests;
 			path = Sources/Client/Tests;
@@ -597,6 +608,7 @@
 				65443A221C0F9B8900C1E0F4 /* Account.swift in Sources */,
 				65443A1D1C0F97B200C1E0F4 /* Encodable.swift in Sources */,
 				65443A181C0F8D9800C1E0F4 /* MessageType.swift in Sources */,
+				65443A3D1C0FC3D000C1E0F4 /* UserInfo.swift in Sources */,
 				65443A271C0F9ECA00C1E0F4 /* MessageId.swift in Sources */,
 				65443A341C0FB80300C1E0F4 /* Authenticaton.swift in Sources */,
 			);
@@ -607,6 +619,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65E1869E1C0F5B83005D891F /* ClientTests.swift in Sources */,
+				65443A421C0FC59900C1E0F4 /* UserInfoTests.swift in Sources */,
 				65443A301C0FB4F300C1E0F4 /* MessageIdTests.swift in Sources */,
 				65443A2C1C0FA62300C1E0F4 /* AccountTests.swift in Sources */,
 				65443A391C0FB92900C1E0F4 /* AuthenticationTests.swift in Sources */,
@@ -621,6 +634,7 @@
 				65443A231C0F9B8900C1E0F4 /* Account.swift in Sources */,
 				65443A1E1C0F97B200C1E0F4 /* Encodable.swift in Sources */,
 				65443A191C0F8D9800C1E0F4 /* MessageType.swift in Sources */,
+				65443A3E1C0FC3D000C1E0F4 /* UserInfo.swift in Sources */,
 				65443A281C0F9ECA00C1E0F4 /* MessageId.swift in Sources */,
 				65443A351C0FB80300C1E0F4 /* Authenticaton.swift in Sources */,
 			);
@@ -634,6 +648,7 @@
 				65443A241C0F9B8900C1E0F4 /* Account.swift in Sources */,
 				65443A1F1C0F97B200C1E0F4 /* Encodable.swift in Sources */,
 				65443A1A1C0F8D9800C1E0F4 /* MessageType.swift in Sources */,
+				65443A3F1C0FC3D000C1E0F4 /* UserInfo.swift in Sources */,
 				65443A291C0F9ECA00C1E0F4 /* MessageId.swift in Sources */,
 				65443A361C0FB80300C1E0F4 /* Authenticaton.swift in Sources */,
 			);
@@ -644,6 +659,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65E1869D1C0F5B81005D891F /* ClientTests.swift in Sources */,
+				65443A431C0FC59900C1E0F4 /* UserInfoTests.swift in Sources */,
 				65443A311C0FB4F300C1E0F4 /* MessageIdTests.swift in Sources */,
 				65443A2D1C0FA62300C1E0F4 /* AccountTests.swift in Sources */,
 				65443A3A1C0FB92900C1E0F4 /* AuthenticationTests.swift in Sources */,
@@ -658,6 +674,7 @@
 				65443A251C0F9B8900C1E0F4 /* Account.swift in Sources */,
 				65443A201C0F97B200C1E0F4 /* Encodable.swift in Sources */,
 				65443A1B1C0F8D9800C1E0F4 /* MessageType.swift in Sources */,
+				65443A401C0FC3D000C1E0F4 /* UserInfo.swift in Sources */,
 				65443A2A1C0F9ECA00C1E0F4 /* MessageId.swift in Sources */,
 				65443A371C0FB80300C1E0F4 /* Authenticaton.swift in Sources */,
 			);
@@ -668,6 +685,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65E1869C1C0F5B81005D891F /* ClientTests.swift in Sources */,
+				65443A441C0FC59900C1E0F4 /* UserInfoTests.swift in Sources */,
 				65443A321C0FB4F300C1E0F4 /* MessageIdTests.swift in Sources */,
 				65443A2E1C0FA62300C1E0F4 /* AccountTests.swift in Sources */,
 				65443A3B1C0FB92900C1E0F4 /* AuthenticationTests.swift in Sources */,

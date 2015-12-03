@@ -34,3 +34,19 @@ extension TypeTestsType where TypeUnderTest: Encodable {
 
 }
 
+struct PublicInfo: Encodable {
+    let foo: String
+
+    func encode() -> Encoded {
+        return ["foo": foo]
+    }
+}
+
+struct PrivateInfo: Encodable {
+    let bar: String
+
+    func encode() -> Encoded {
+        return ["bar": bar]
+    }
+}
+
