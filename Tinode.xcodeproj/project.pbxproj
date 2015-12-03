@@ -19,10 +19,10 @@
 		65443A1E1C0F97B200C1E0F4 /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A1C1C0F97B200C1E0F4 /* Encodable.swift */; };
 		65443A1F1C0F97B200C1E0F4 /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A1C1C0F97B200C1E0F4 /* Encodable.swift */; };
 		65443A201C0F97B200C1E0F4 /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A1C1C0F97B200C1E0F4 /* Encodable.swift */; };
-		65443A221C0F9B8900C1E0F4 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A211C0F9B8900C1E0F4 /* Account.swift */; };
-		65443A231C0F9B8900C1E0F4 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A211C0F9B8900C1E0F4 /* Account.swift */; };
-		65443A241C0F9B8900C1E0F4 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A211C0F9B8900C1E0F4 /* Account.swift */; };
-		65443A251C0F9B8900C1E0F4 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A211C0F9B8900C1E0F4 /* Account.swift */; };
+		65443A221C0F9B8900C1E0F4 /* AccountMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A211C0F9B8900C1E0F4 /* AccountMessage.swift */; };
+		65443A231C0F9B8900C1E0F4 /* AccountMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A211C0F9B8900C1E0F4 /* AccountMessage.swift */; };
+		65443A241C0F9B8900C1E0F4 /* AccountMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A211C0F9B8900C1E0F4 /* AccountMessage.swift */; };
+		65443A251C0F9B8900C1E0F4 /* AccountMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A211C0F9B8900C1E0F4 /* AccountMessage.swift */; };
 		65443A271C0F9ECA00C1E0F4 /* MessageId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A261C0F9ECA00C1E0F4 /* MessageId.swift */; };
 		65443A281C0F9ECA00C1E0F4 /* MessageId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A261C0F9ECA00C1E0F4 /* MessageId.swift */; };
 		65443A291C0F9ECA00C1E0F4 /* MessageId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A261C0F9ECA00C1E0F4 /* MessageId.swift */; };
@@ -96,7 +96,7 @@
 		65443A151C0F72AD00C1E0F4 /* Decodable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Decodable.framework; path = Carthage/Build/Mac/Decodable.framework; sourceTree = "<group>"; };
 		65443A171C0F8D9800C1E0F4 /* MessageType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageType.swift; sourceTree = "<group>"; };
 		65443A1C1C0F97B200C1E0F4 /* Encodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
-		65443A211C0F9B8900C1E0F4 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Account.swift; path = Messages/Account.swift; sourceTree = "<group>"; };
+		65443A211C0F9B8900C1E0F4 /* AccountMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountMessage.swift; path = Messages/AccountMessage.swift; sourceTree = "<group>"; };
 		65443A261C0F9ECA00C1E0F4 /* MessageId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageId.swift; sourceTree = "<group>"; };
 		65443A2B1C0FA62300C1E0F4 /* AccountTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountTests.swift; sourceTree = "<group>"; };
 		65443A2F1C0FB4F300C1E0F4 /* MessageIdTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageIdTests.swift; sourceTree = "<group>"; };
@@ -220,7 +220,7 @@
 		65E186871C0F5995005D891F /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				65443A211C0F9B8900C1E0F4 /* Account.swift */,
+				65443A211C0F9B8900C1E0F4 /* AccountMessage.swift */,
 				65443A331C0FB80300C1E0F4 /* Authenticaton.swift */,
 				65443A1C1C0F97B200C1E0F4 /* Encodable.swift */,
 				65443A261C0F9ECA00C1E0F4 /* MessageId.swift */,
@@ -605,7 +605,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65E186A01C0F5C33005D891F /* Tinode.swift in Sources */,
-				65443A221C0F9B8900C1E0F4 /* Account.swift in Sources */,
+				65443A221C0F9B8900C1E0F4 /* AccountMessage.swift in Sources */,
 				65443A1D1C0F97B200C1E0F4 /* Encodable.swift in Sources */,
 				65443A181C0F8D9800C1E0F4 /* MessageType.swift in Sources */,
 				65443A3D1C0FC3D000C1E0F4 /* UserInfo.swift in Sources */,
@@ -631,7 +631,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65E186A11C0F5C33005D891F /* Tinode.swift in Sources */,
-				65443A231C0F9B8900C1E0F4 /* Account.swift in Sources */,
+				65443A231C0F9B8900C1E0F4 /* AccountMessage.swift in Sources */,
 				65443A1E1C0F97B200C1E0F4 /* Encodable.swift in Sources */,
 				65443A191C0F8D9800C1E0F4 /* MessageType.swift in Sources */,
 				65443A3E1C0FC3D000C1E0F4 /* UserInfo.swift in Sources */,
@@ -645,7 +645,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65E186A21C0F5C33005D891F /* Tinode.swift in Sources */,
-				65443A241C0F9B8900C1E0F4 /* Account.swift in Sources */,
+				65443A241C0F9B8900C1E0F4 /* AccountMessage.swift in Sources */,
 				65443A1F1C0F97B200C1E0F4 /* Encodable.swift in Sources */,
 				65443A1A1C0F8D9800C1E0F4 /* MessageType.swift in Sources */,
 				65443A3F1C0FC3D000C1E0F4 /* UserInfo.swift in Sources */,
@@ -671,7 +671,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65E186A31C0F5C52005D891F /* Tinode.swift in Sources */,
-				65443A251C0F9B8900C1E0F4 /* Account.swift in Sources */,
+				65443A251C0F9B8900C1E0F4 /* AccountMessage.swift in Sources */,
 				65443A201C0F97B200C1E0F4 /* Encodable.swift in Sources */,
 				65443A1B1C0F8D9800C1E0F4 /* MessageType.swift in Sources */,
 				65443A401C0FC3D000C1E0F4 /* UserInfo.swift in Sources */,
