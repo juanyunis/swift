@@ -6,7 +6,7 @@
 //  Copyright © 2015 Tinode. All rights reserved.
 //
 
-struct AccountMessage: ClientMessageType {
+struct AccountMessage {
 
     enum Context {
         case New, Current
@@ -31,6 +31,21 @@ struct AccountMessage: ClientMessageType {
     init(id: MessageId? = .None, context: Context = .Current, basic: Authentication.Basic.UserPasswordPair, userInfo: UserInfo = UserInfo(publicInfo: .None, privateInfo: .None)) {
         self.init(id: id, context: context, auth: Authentication.Basic(user: basic.user, password: basic.password), userInfo: userInfo)
     }
+}
+
+extension AccountMessage.Context: Encodable {
+
+    func encode() -> Encoded {
+        switch self {
+        case .New:
+            return ["user": "new"]
+        default:
+            return [:]
+        }
+    }
+}
+
+extension AccountMessage: ClientMessageType {
 
     func encode() -> Encoded {
 
@@ -47,14 +62,4 @@ struct AccountMessage: ClientMessageType {
     }
 }
 
-extension AccountMessage.Context: Encodable {
 
-    func encode() -> Encoded {
-        switch self {
-        case .New:
-            return ["user": "new"]
-        default:
-            return [:]
-        }
-    }
-}
