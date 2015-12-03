@@ -12,6 +12,7 @@ import XCTest
 class AccountMessageTests: XCTestCase, TypeTestsType {
 
     var target: AccountMessage!
+    let id: MessageId = "1a2b3c"
     let userPasswordPair: Authentication.Basic.UserPasswordPair = ("user", "password")
 
     override func tearDown() {
@@ -33,9 +34,9 @@ class AccountMessageEncodableTests: AccountMessageTests {
     }
 
     func test__with_id() {
-        target = AccountMessage(id: "1a2b3c", basic: userPasswordPair)
+        target = AccountMessage(id: id, basic: userPasswordPair)
         let value: String? = encodedObjectForKey("id")
-        XCTAssertEqual(value, "1a2b3c")
+        XCTAssertEqual(value, id.description)
     }
 
     func test__with_new_context() {

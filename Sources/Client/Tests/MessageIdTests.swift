@@ -33,3 +33,31 @@ class MessageIdTests: XCTestCase {
         XCTAssertEqual(id, "hello world")
     }
 }
+
+class IncrementingMessageIdTests: XCTestCase {
+
+    var id: IncrementalMessageId = 1
+
+    func test__init()  {
+        XCTAssertEqual(id.description, "1")
+    }
+
+    func test__init_with_prefix()  {
+        id = IncrementalMessageId(1, prefix: "swift_")
+        XCTAssertEqual(id.description, "swift_1")
+    }
+
+    func test__equality()  {
+        XCTAssertNotEqual(id, IncrementalMessageId(2))
+    }
+
+    func test__postfix_increment() {
+        XCTAssertEqual("\(id++)", "1")
+        XCTAssertEqual(id, IncrementalMessageId(2))
+    }
+
+    func test__prefix_increment() {
+        XCTAssertEqual("\(++id)", "2")
+        XCTAssertEqual(id, IncrementalMessageId(2))
+    }
+}

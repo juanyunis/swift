@@ -10,8 +10,8 @@ import Decodable
 
 protocol MessageType {
 
-    /// - returns: id, a MessageId?
-    var id: MessageId? { get }
+    /// - returns: id, a MessageIdType?
+    var id: MessageIdType? { get }
 }
 
 protocol ClientMessageType: MessageType, Encodable { }
