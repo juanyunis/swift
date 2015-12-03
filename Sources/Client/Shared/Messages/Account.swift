@@ -6,29 +6,6 @@
 //  Copyright © 2015 Tinode. All rights reserved.
 //
 
-enum AuthenticationScheme {
-    case Basic(String)
-}
-
-extension AuthenticationScheme: Encodable {
-
-    var schemeName: String {
-        switch self {
-        case .Basic(_):
-            return "basic"
-        }
-    }
-
-    func encode() -> Encoded {
-        var encoded = ["scheme": schemeName]
-        switch self {
-        case .Basic(let secret):
-            encoded["secret"] = secret
-        }
-        return encoded
-    }
-}
-
 struct AccountMessage: ClientMessageType {
 
     enum Context {
@@ -37,16 +14,20 @@ struct AccountMessage: ClientMessageType {
 
     let id: MessageId?
     let context: Context
-    let auth: Array<AuthenticationScheme>
+    let auth: AnySequence<AuthenticationSchemeType>
 
-    init(id: MessageId? = .None, context: Context = .Current, auth: [AuthenticationScheme]) {
+    init(id: MessageId? = .None, context: Context = .Current, auth: AnySequence<AuthenticationSchemeType>) {
         self.id = id
         self.context = context
         self.auth = auth
     }
 
-    init(id: MessageId? = .None, context: Context = .Current, basic secret: String) {
-        self.init(id: id, context: context, auth: [.Basic(secret)])
+    init(id: MessageId? = .None, context: Context = .Current, auth: AuthenticationSchemeType...) {
+        self.init(id: id, context: context, auth: AnySequence(auth))
+    }
+
+    init(id: MessageId? = .None, context: Context = .Current, basic: Authentication.Basic.UserPasswordPair) {
+        self.init(id: id, context: context, auth: Authentication.Basic(user: basic.user, password: basic.password))
     }
 
     func encode() -> Encoded {
@@ -59,9 +40,8 @@ struct AccountMessage: ClientMessageType {
 
         result += context.encode()
 
-        if !auth.isEmpty {
-            result["auth"] = auth.map { $0.encode() }
-        }
+        result["auth"] = auth.map { $0.encode() }
+
 
         // TODO: defacs?
 

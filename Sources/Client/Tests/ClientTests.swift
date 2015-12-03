@@ -15,3 +15,22 @@ class ClientTests: XCTestCase {
         XCTAssertTrue(__forTestingPurposes())
     }
 }
+
+protocol TypeTestsType {
+    typealias TypeUnderTest
+
+    var target: TypeUnderTest! { get set }
+}
+
+extension TypeTestsType where TypeUnderTest: Encodable {
+
+    func encodedObjectForKey(key: String) -> AnyObject? {
+        return target.encode()[key]
+    }
+
+    func encodedObjectForKey<T>(key: String) -> T? {
+        return target.encode()[key] as? T
+    }
+
+}
+
