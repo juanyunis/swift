@@ -6,8 +6,6 @@
 //  Copyright © 2015 Tinode. All rights reserved.
 //
 
-import Foundation
-
 internal func __forTestingPurposes() -> Bool {
     return true
 }

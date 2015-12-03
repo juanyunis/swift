@@ -48,13 +48,8 @@ extension AccountMessage.Context: Encodable {
 extension AccountMessage: ClientMessageType {
 
     func encode() -> Encoded {
-
-        var result = Dictionary<String, AnyObject>()
-
-        if let id = id {
-            result += id.encode()
-        }
-
+        var result = [String: AnyObject]()
+        result += id?.encode()
         result += context.encode()
         result["auth"] = auth.map { $0.encode() }
         result["init"] = userInfo.encode()

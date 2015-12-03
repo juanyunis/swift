@@ -12,9 +12,11 @@ public protocol Encodable {
     func encode() -> Encoded
 }
 
-internal func +=<Key, Value>(inout lhs: Dictionary<Key, Value>, rhs: Dictionary<Key, Value>) {
-    for (key, value) in rhs {
-        lhs[key] = value
+internal func +=<Key, Value>(inout lhs: Dictionary<Key, Value>, rhs: Dictionary<Key, Value>?) {
+    if let rhs = rhs {
+        for (key, value) in rhs {
+            lhs[key] = value
+        }
     }
 }
 

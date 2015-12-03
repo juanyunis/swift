@@ -27,9 +27,9 @@
 		65443A281C0F9ECA00C1E0F4 /* MessageId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A261C0F9ECA00C1E0F4 /* MessageId.swift */; };
 		65443A291C0F9ECA00C1E0F4 /* MessageId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A261C0F9ECA00C1E0F4 /* MessageId.swift */; };
 		65443A2A1C0F9ECA00C1E0F4 /* MessageId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A261C0F9ECA00C1E0F4 /* MessageId.swift */; };
-		65443A2C1C0FA62300C1E0F4 /* AccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A2B1C0FA62300C1E0F4 /* AccountTests.swift */; };
-		65443A2D1C0FA62300C1E0F4 /* AccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A2B1C0FA62300C1E0F4 /* AccountTests.swift */; };
-		65443A2E1C0FA62300C1E0F4 /* AccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A2B1C0FA62300C1E0F4 /* AccountTests.swift */; };
+		65443A2C1C0FA62300C1E0F4 /* AccountMessageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A2B1C0FA62300C1E0F4 /* AccountMessageTests.swift */; };
+		65443A2D1C0FA62300C1E0F4 /* AccountMessageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A2B1C0FA62300C1E0F4 /* AccountMessageTests.swift */; };
+		65443A2E1C0FA62300C1E0F4 /* AccountMessageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A2B1C0FA62300C1E0F4 /* AccountMessageTests.swift */; };
 		65443A301C0FB4F300C1E0F4 /* MessageIdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A2F1C0FB4F300C1E0F4 /* MessageIdTests.swift */; };
 		65443A311C0FB4F300C1E0F4 /* MessageIdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A2F1C0FB4F300C1E0F4 /* MessageIdTests.swift */; };
 		65443A321C0FB4F300C1E0F4 /* MessageIdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A2F1C0FB4F300C1E0F4 /* MessageIdTests.swift */; };
@@ -47,6 +47,20 @@
 		65443A421C0FC59900C1E0F4 /* UserInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A411C0FC59900C1E0F4 /* UserInfoTests.swift */; };
 		65443A431C0FC59900C1E0F4 /* UserInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A411C0FC59900C1E0F4 /* UserInfoTests.swift */; };
 		65443A441C0FC59900C1E0F4 /* UserInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A411C0FC59900C1E0F4 /* UserInfoTests.swift */; };
+		65443A471C1067C000C1E0F4 /* LoginMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A461C1067C000C1E0F4 /* LoginMessage.swift */; };
+		65443A481C1067C000C1E0F4 /* LoginMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A461C1067C000C1E0F4 /* LoginMessage.swift */; };
+		65443A491C1067C000C1E0F4 /* LoginMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A461C1067C000C1E0F4 /* LoginMessage.swift */; };
+		65443A4A1C1067C000C1E0F4 /* LoginMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A461C1067C000C1E0F4 /* LoginMessage.swift */; };
+		65443A4C1C1067E300C1E0F4 /* LoginMessageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A4B1C1067E300C1E0F4 /* LoginMessageTests.swift */; };
+		65443A4D1C1067E300C1E0F4 /* LoginMessageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A4B1C1067E300C1E0F4 /* LoginMessageTests.swift */; };
+		65443A4E1C1067E300C1E0F4 /* LoginMessageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A4B1C1067E300C1E0F4 /* LoginMessageTests.swift */; };
+		65443A511C1071B200C1E0F4 /* UserAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A501C1071B200C1E0F4 /* UserAgent.swift */; };
+		65443A521C1071B200C1E0F4 /* UserAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A501C1071B200C1E0F4 /* UserAgent.swift */; };
+		65443A531C1071B200C1E0F4 /* UserAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A501C1071B200C1E0F4 /* UserAgent.swift */; };
+		65443A541C1071B200C1E0F4 /* UserAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A501C1071B200C1E0F4 /* UserAgent.swift */; };
+		65443A561C10729700C1E0F4 /* UserAgentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A551C10729700C1E0F4 /* UserAgentTests.swift */; };
+		65443A571C10729700C1E0F4 /* UserAgentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A551C10729700C1E0F4 /* UserAgentTests.swift */; };
+		65443A581C10729700C1E0F4 /* UserAgentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A551C10729700C1E0F4 /* UserAgentTests.swift */; };
 		65E186321C0F58FC005D891F /* Tinode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E186271C0F58FC005D891F /* Tinode.framework */; };
 		65E1865B1C0F5924005D891F /* Tinode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E186511C0F5923005D891F /* Tinode.framework */; };
 		65E186771C0F5930005D891F /* Tinode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E1866D1C0F592F005D891F /* Tinode.framework */; };
@@ -98,12 +112,16 @@
 		65443A1C1C0F97B200C1E0F4 /* Encodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
 		65443A211C0F9B8900C1E0F4 /* AccountMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountMessage.swift; path = Messages/AccountMessage.swift; sourceTree = "<group>"; };
 		65443A261C0F9ECA00C1E0F4 /* MessageId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageId.swift; sourceTree = "<group>"; };
-		65443A2B1C0FA62300C1E0F4 /* AccountTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountTests.swift; sourceTree = "<group>"; };
+		65443A2B1C0FA62300C1E0F4 /* AccountMessageTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountMessageTests.swift; sourceTree = "<group>"; };
 		65443A2F1C0FB4F300C1E0F4 /* MessageIdTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageIdTests.swift; sourceTree = "<group>"; };
 		65443A331C0FB80300C1E0F4 /* Authenticaton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authenticaton.swift; sourceTree = "<group>"; };
 		65443A381C0FB92900C1E0F4 /* AuthenticationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationTests.swift; sourceTree = "<group>"; };
 		65443A3C1C0FC3D000C1E0F4 /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		65443A411C0FC59900C1E0F4 /* UserInfoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoTests.swift; sourceTree = "<group>"; };
+		65443A461C1067C000C1E0F4 /* LoginMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginMessage.swift; path = Messages/LoginMessage.swift; sourceTree = "<group>"; };
+		65443A4B1C1067E300C1E0F4 /* LoginMessageTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginMessageTests.swift; sourceTree = "<group>"; };
+		65443A501C1071B200C1E0F4 /* UserAgent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAgent.swift; sourceTree = "<group>"; };
+		65443A551C10729700C1E0F4 /* UserAgentTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAgentTests.swift; sourceTree = "<group>"; };
 		65E186271C0F58FC005D891F /* Tinode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Tinode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		65E186311C0F58FC005D891F /* iOS ClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS ClientTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65E186441C0F5912005D891F /* Tinode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Tinode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -183,6 +201,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		65443A451C1067AC00C1E0F4 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				65443A211C0F9B8900C1E0F4 /* AccountMessage.swift */,
+				65443A461C1067C000C1E0F4 /* LoginMessage.swift */,
+			);
+			name = Messages;
+			sourceTree = "<group>";
+		};
+		65443A4F1C1067ED00C1E0F4 /* Message Tests */ = {
+			isa = PBXGroup;
+			children = (
+				65443A2B1C0FA62300C1E0F4 /* AccountMessageTests.swift */,
+				65443A4B1C1067E300C1E0F4 /* LoginMessageTests.swift */,
+			);
+			name = "Message Tests";
+			sourceTree = "<group>";
+		};
 		65E1861B1C0F5894005D891F = {
 			isa = PBXGroup;
 			children = (
@@ -220,13 +256,14 @@
 		65E186871C0F5995005D891F /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				65443A211C0F9B8900C1E0F4 /* AccountMessage.swift */,
+				65443A451C1067AC00C1E0F4 /* Messages */,
 				65443A331C0FB80300C1E0F4 /* Authenticaton.swift */,
 				65443A1C1C0F97B200C1E0F4 /* Encodable.swift */,
 				65443A261C0F9ECA00C1E0F4 /* MessageId.swift */,
 				65443A171C0F8D9800C1E0F4 /* MessageType.swift */,
 				65E1869F1C0F5C33005D891F /* Tinode.swift */,
 				65443A3C1C0FC3D000C1E0F4 /* UserInfo.swift */,
+				65443A501C1071B200C1E0F4 /* UserAgent.swift */,
 			);
 			name = Shared;
 			path = Sources/Client/Shared;
@@ -247,11 +284,12 @@
 			isa = PBXGroup;
 			children = (
 				65E1868E1C0F5995005D891F /* Info.plist */,
-				65443A2B1C0FA62300C1E0F4 /* AccountTests.swift */,
+				65443A4F1C1067ED00C1E0F4 /* Message Tests */,
 				65443A381C0FB92900C1E0F4 /* AuthenticationTests.swift */,
 				65E1868D1C0F5995005D891F /* ClientTests.swift */,
 				65443A2F1C0FB4F300C1E0F4 /* MessageIdTests.swift */,
 				65443A411C0FC59900C1E0F4 /* UserInfoTests.swift */,
+				65443A551C10729700C1E0F4 /* UserAgentTests.swift */,
 			);
 			name = Tests;
 			path = Sources/Client/Tests;
@@ -607,6 +645,8 @@
 				65E186A01C0F5C33005D891F /* Tinode.swift in Sources */,
 				65443A221C0F9B8900C1E0F4 /* AccountMessage.swift in Sources */,
 				65443A1D1C0F97B200C1E0F4 /* Encodable.swift in Sources */,
+				65443A471C1067C000C1E0F4 /* LoginMessage.swift in Sources */,
+				65443A511C1071B200C1E0F4 /* UserAgent.swift in Sources */,
 				65443A181C0F8D9800C1E0F4 /* MessageType.swift in Sources */,
 				65443A3D1C0FC3D000C1E0F4 /* UserInfo.swift in Sources */,
 				65443A271C0F9ECA00C1E0F4 /* MessageId.swift in Sources */,
@@ -621,8 +661,10 @@
 				65E1869E1C0F5B83005D891F /* ClientTests.swift in Sources */,
 				65443A421C0FC59900C1E0F4 /* UserInfoTests.swift in Sources */,
 				65443A301C0FB4F300C1E0F4 /* MessageIdTests.swift in Sources */,
-				65443A2C1C0FA62300C1E0F4 /* AccountTests.swift in Sources */,
+				65443A4C1C1067E300C1E0F4 /* LoginMessageTests.swift in Sources */,
+				65443A2C1C0FA62300C1E0F4 /* AccountMessageTests.swift in Sources */,
 				65443A391C0FB92900C1E0F4 /* AuthenticationTests.swift in Sources */,
+				65443A561C10729700C1E0F4 /* UserAgentTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -633,6 +675,8 @@
 				65E186A11C0F5C33005D891F /* Tinode.swift in Sources */,
 				65443A231C0F9B8900C1E0F4 /* AccountMessage.swift in Sources */,
 				65443A1E1C0F97B200C1E0F4 /* Encodable.swift in Sources */,
+				65443A481C1067C000C1E0F4 /* LoginMessage.swift in Sources */,
+				65443A521C1071B200C1E0F4 /* UserAgent.swift in Sources */,
 				65443A191C0F8D9800C1E0F4 /* MessageType.swift in Sources */,
 				65443A3E1C0FC3D000C1E0F4 /* UserInfo.swift in Sources */,
 				65443A281C0F9ECA00C1E0F4 /* MessageId.swift in Sources */,
@@ -647,6 +691,8 @@
 				65E186A21C0F5C33005D891F /* Tinode.swift in Sources */,
 				65443A241C0F9B8900C1E0F4 /* AccountMessage.swift in Sources */,
 				65443A1F1C0F97B200C1E0F4 /* Encodable.swift in Sources */,
+				65443A491C1067C000C1E0F4 /* LoginMessage.swift in Sources */,
+				65443A531C1071B200C1E0F4 /* UserAgent.swift in Sources */,
 				65443A1A1C0F8D9800C1E0F4 /* MessageType.swift in Sources */,
 				65443A3F1C0FC3D000C1E0F4 /* UserInfo.swift in Sources */,
 				65443A291C0F9ECA00C1E0F4 /* MessageId.swift in Sources */,
@@ -661,8 +707,10 @@
 				65E1869D1C0F5B81005D891F /* ClientTests.swift in Sources */,
 				65443A431C0FC59900C1E0F4 /* UserInfoTests.swift in Sources */,
 				65443A311C0FB4F300C1E0F4 /* MessageIdTests.swift in Sources */,
-				65443A2D1C0FA62300C1E0F4 /* AccountTests.swift in Sources */,
+				65443A4D1C1067E300C1E0F4 /* LoginMessageTests.swift in Sources */,
+				65443A2D1C0FA62300C1E0F4 /* AccountMessageTests.swift in Sources */,
 				65443A3A1C0FB92900C1E0F4 /* AuthenticationTests.swift in Sources */,
+				65443A571C10729700C1E0F4 /* UserAgentTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -673,6 +721,8 @@
 				65E186A31C0F5C52005D891F /* Tinode.swift in Sources */,
 				65443A251C0F9B8900C1E0F4 /* AccountMessage.swift in Sources */,
 				65443A201C0F97B200C1E0F4 /* Encodable.swift in Sources */,
+				65443A4A1C1067C000C1E0F4 /* LoginMessage.swift in Sources */,
+				65443A541C1071B200C1E0F4 /* UserAgent.swift in Sources */,
 				65443A1B1C0F8D9800C1E0F4 /* MessageType.swift in Sources */,
 				65443A401C0FC3D000C1E0F4 /* UserInfo.swift in Sources */,
 				65443A2A1C0F9ECA00C1E0F4 /* MessageId.swift in Sources */,
@@ -687,8 +737,10 @@
 				65E1869C1C0F5B81005D891F /* ClientTests.swift in Sources */,
 				65443A441C0FC59900C1E0F4 /* UserInfoTests.swift in Sources */,
 				65443A321C0FB4F300C1E0F4 /* MessageIdTests.swift in Sources */,
-				65443A2E1C0FA62300C1E0F4 /* AccountTests.swift in Sources */,
+				65443A4E1C1067E300C1E0F4 /* LoginMessageTests.swift in Sources */,
+				65443A2E1C0FA62300C1E0F4 /* AccountMessageTests.swift in Sources */,
 				65443A3B1C0FB92900C1E0F4 /* AuthenticationTests.swift in Sources */,
+				65443A581C10729700C1E0F4 /* UserAgentTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

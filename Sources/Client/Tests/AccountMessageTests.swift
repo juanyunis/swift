@@ -1,5 +1,5 @@
 //
-//  AccountTests.swift
+//  AccountMessageTests.swift
 //  Tinode
 //
 //  Created by Daniel Thorpe on 02/12/2015.

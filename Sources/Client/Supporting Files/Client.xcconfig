@@ -8,6 +8,7 @@
 
 #include "../../Tinode.xcconfig"
 
+CLIENT_AGENT_ID = Tinode Swift SDK
 CLIENT_VERSION = 0.1
 
 INFOPLIST_FILE = $(SRCROOT)/Sources/Client/Supporting Files/Info.plist
