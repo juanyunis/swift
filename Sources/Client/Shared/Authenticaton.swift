@@ -21,6 +21,10 @@ struct Authentication {
         let user: String
         let password: String
 
+        var secretEncodedValue: String {
+            return "\(user):\(password)"
+        }
+
         init(user: String, password: String) {
             self.user = user
             self.password = password
@@ -29,7 +33,7 @@ struct Authentication {
         func encode() -> Encoded {
             return [
                 "scheme": schemeName,
-                "secret": "\(user):\(password)"
+                "secret": secretEncodedValue
             ]
         }
     }

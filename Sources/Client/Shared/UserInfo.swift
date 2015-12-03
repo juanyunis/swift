@@ -64,13 +64,8 @@ struct UserInfo: Encodable {
             "defacs": accessMode.encode()
         ]
 
-        if let publicInfo = publicInfo {
-            encoded["public"] = publicInfo.encode()
-        }
-
-        if let privateInfo = privateInfo {
-            encoded["private"] = privateInfo.encode()
-        }
+        encoded["public"] = publicInfo?.encode()
+        encoded["private"] = privateInfo?.encode()
 
         return encoded
     }

@@ -62,6 +62,8 @@ class AccountMessageEncodableTests: AccountMessageTests {
     func test__with_default_user_info() {
         target = AccountMessage(basic: userPasswordPair)
         if let value: Encoded = encodedObjectForKey("init") {
+            XCTAssertNil(value["public"])
+            XCTAssertNil(value["private"])            
             if let defacs = value["defacs"] as? Encoded {
                 XCTAssertEqual(defacs["auth"] as? String, AccessMode().authenticated.encodedValue)
                 XCTAssertEqual(defacs["anon"] as? String, AccessMode().anonymous.encodedValue)
