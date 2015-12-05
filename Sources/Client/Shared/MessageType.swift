@@ -8,7 +8,7 @@
 
 import Decodable
 
-protocol MessageType: Encodable {
+protocol ClientPayloadType: Encodable {
 
     /// - returns: the name of the message, i.e. `pub`.
     var name: String { get }
@@ -20,19 +20,19 @@ protocol ClientMessageType: Encodable {
     var id: MessageIdType? { get }
 
     /// - returns: the payload which is Encodable
-    var message: MessageType { get }
+    var payload: ClientPayloadType { get }
 }
 
 extension ClientMessageType {
 
     func encode() -> Encoded {
-        var _payload = message.encode()
+        var _payload = payload.encode()
         _payload += id?.encode()
-        return [message.name: _payload]
+        return [payload.name: _payload]
     }
 }
 
-struct BlockMessage: MessageType {
+struct BlockPayload: ClientPayloadType {
 
     let name: String
     let block: EncodeBlock
@@ -50,7 +50,7 @@ struct BlockMessage: MessageType {
 struct ClientMessage: ClientMessageType {
 
     let id: MessageIdType?
-    let message: MessageType
+    let payload: ClientPayloadType
 
     /**
      Creates a client message with a known message type.
@@ -58,9 +58,9 @@ struct ClientMessage: ClientMessageType {
      - parameter id: an optional message id to send, defaults to .None
      - parameter message: the MessageType value.
     */
-    init(id: MessageIdType? = .None, message: MessageType) {
+    init(id: MessageIdType? = .None, payload: ClientPayloadType) {
         self.id = id
-        self.message = message
+        self.payload = payload
     }
 
     /**
@@ -76,7 +76,12 @@ struct ClientMessage: ClientMessageType {
      - parameter block: a EnclodeBlock which return returns an Encoded value.
      */
     init(_ name: String, id: MessageIdType? = .None, block: EncodeBlock) {
-        self.init(id: id, message: BlockMessage(name: name, block: block))
+        self.init(id: id, payload: BlockPayload(name: name, block: block))
     }
 }
+
+
+protocol ServerPayloadType: Decodable { }
+
+
 

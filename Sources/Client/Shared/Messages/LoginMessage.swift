@@ -8,12 +8,10 @@
 
 struct LoginMessage {
 
-    let name: String
     let auth: AuthenticationSchemeType
     let userAgent: UserAgentType?
 
-    init(name: String = "login", auth: AuthenticationSchemeType, userAgent: UserAgentType? = UserAgent()) {
-        self.name = name
+    init(auth: AuthenticationSchemeType, userAgent: UserAgentType? = UserAgent()) {
         self.auth = auth
         self.userAgent = userAgent
     }
@@ -23,7 +21,11 @@ struct LoginMessage {
     }
 }
 
-extension LoginMessage: MessageType {
+extension LoginMessage: ClientPayloadType {
+
+    var name: String {
+        return "login"
+    }
 
     func encode() -> Encoded {
         var result = [String: AnyObject]()

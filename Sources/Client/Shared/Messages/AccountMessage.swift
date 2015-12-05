@@ -12,13 +12,11 @@ struct AccountMessage {
         case New, Current
     }
 
-    let name: String
     let context: Context
     let auth: AnySequence<AuthenticationSchemeType>
     let userInfo: UserInfo
 
-    init(name: String = "acc", context: Context = .Current, auth: AnySequence<AuthenticationSchemeType>, userInfo: UserInfo) {
-        self.name = name
+    init(context: Context = .Current, auth: AnySequence<AuthenticationSchemeType>, userInfo: UserInfo) {
         self.context = context
         self.auth = auth
         self.userInfo = userInfo
@@ -45,7 +43,11 @@ extension AccountMessage.Context: Encodable {
     }
 }
 
-extension AccountMessage: MessageType {
+extension AccountMessage: ClientPayloadType {
+
+    var name: String {
+        return "acc"
+    }
 
     func encode() -> Encoded {
         var result = [String: AnyObject]()

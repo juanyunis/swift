@@ -41,7 +41,7 @@ extension TypeTestsType where TypeUnderTest: ClientMessageType {
 
     func encodedPayload() -> Encoded? {
         let encoded = target.encode()
-        return encoded[target.message.name] as? Encoded
+        return encoded[target.payload.name] as? Encoded
     }
 
     func encodedObjectForKey(key: String) -> AnyObject? {
