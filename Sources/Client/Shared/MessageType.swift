@@ -47,17 +47,35 @@ struct BlockMessage: MessageType {
     }
 }
 
-struct ClientMessage {
+struct ClientMessage: ClientMessageType {
 
     let id: MessageIdType?
     let message: MessageType
 
+    /**
+     Creates a client message with a known message type.
+     
+     - parameter id: an optional message id to send, defaults to .None
+     - parameter message: the MessageType value.
+    */
     init(id: MessageIdType? = .None, message: MessageType) {
         self.id = id
         self.message = message
     }
 
-    init(id: MessageIdType? = .None, name: String, block: EncodeBlock) {
+    /**
+     Creates a "free form" client message which is useful for testing and
+     on the fly message sending. For example
+
+     ```swift
+     let msg = ClientMessage("test") { ["foo": "bar"] }
+     ```
+
+     - parameter name: the name of the message.
+     - parameter id: an optional message id to send, defaults to .None
+     - parameter block: a EnclodeBlock which return returns an Encoded value.
+     */
+    init(_ name: String, id: MessageIdType? = .None, block: EncodeBlock) {
         self.init(id: id, message: BlockMessage(name: name, block: block))
     }
 }

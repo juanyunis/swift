@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6514F3131C1354F000E31DAD /* ClientMessageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6514F3121C1354F000E31DAD /* ClientMessageTests.swift */; };
+		6514F3141C1354F000E31DAD /* ClientMessageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6514F3121C1354F000E31DAD /* ClientMessageTests.swift */; };
+		6514F3151C1354F000E31DAD /* ClientMessageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6514F3121C1354F000E31DAD /* ClientMessageTests.swift */; };
 		65443A0F1C0F724000C1E0F4 /* Decodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65443A0E1C0F724000C1E0F4 /* Decodable.framework */; };
 		65443A111C0F726900C1E0F4 /* Decodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65443A101C0F726900C1E0F4 /* Decodable.framework */; };
 		65443A131C0F727900C1E0F4 /* Decodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65443A121C0F727900C1E0F4 /* Decodable.framework */; };
@@ -104,6 +107,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6514F3121C1354F000E31DAD /* ClientMessageTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientMessageTests.swift; sourceTree = "<group>"; };
 		65443A0E1C0F724000C1E0F4 /* Decodable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Decodable.framework; path = Carthage/Build/iOS/Decodable.framework; sourceTree = "<group>"; };
 		65443A101C0F726900C1E0F4 /* Decodable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Decodable.framework; path = Carthage/Build/watchOS/Decodable.framework; sourceTree = "<group>"; };
 		65443A121C0F727900C1E0F4 /* Decodable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Decodable.framework; path = Carthage/Build/tvOS/Decodable.framework; sourceTree = "<group>"; };
@@ -292,12 +296,13 @@
 			isa = PBXGroup;
 			children = (
 				65E1868E1C0F5995005D891F /* Info.plist */,
-				65443A4F1C1067ED00C1E0F4 /* Message Tests */,
 				65443A381C0FB92900C1E0F4 /* AuthenticationTests.swift */,
+				6514F3121C1354F000E31DAD /* ClientMessageTests.swift */,
 				65E1868D1C0F5995005D891F /* ClientTests.swift */,
 				65443A2F1C0FB4F300C1E0F4 /* MessageIdTests.swift */,
-				65443A411C0FC59900C1E0F4 /* UserInfoTests.swift */,
 				65443A551C10729700C1E0F4 /* UserAgentTests.swift */,
+				65443A411C0FC59900C1E0F4 /* UserInfoTests.swift */,
+				65443A4F1C1067ED00C1E0F4 /* Message Tests */,
 			);
 			name = Tests;
 			path = Sources/Client/Tests;
@@ -668,6 +673,7 @@
 			files = (
 				65E1869E1C0F5B83005D891F /* ClientTests.swift in Sources */,
 				65443A421C0FC59900C1E0F4 /* UserInfoTests.swift in Sources */,
+				6514F3131C1354F000E31DAD /* ClientMessageTests.swift in Sources */,
 				65443A301C0FB4F300C1E0F4 /* MessageIdTests.swift in Sources */,
 				65443A4C1C1067E300C1E0F4 /* LoginMessageTests.swift in Sources */,
 				65443A2C1C0FA62300C1E0F4 /* AccountMessageTests.swift in Sources */,
@@ -714,6 +720,7 @@
 			files = (
 				65E1869D1C0F5B81005D891F /* ClientTests.swift in Sources */,
 				65443A431C0FC59900C1E0F4 /* UserInfoTests.swift in Sources */,
+				6514F3141C1354F000E31DAD /* ClientMessageTests.swift in Sources */,
 				65443A311C0FB4F300C1E0F4 /* MessageIdTests.swift in Sources */,
 				65443A4D1C1067E300C1E0F4 /* LoginMessageTests.swift in Sources */,
 				65443A2D1C0FA62300C1E0F4 /* AccountMessageTests.swift in Sources */,
@@ -744,6 +751,7 @@
 			files = (
 				65E1869C1C0F5B81005D891F /* ClientTests.swift in Sources */,
 				65443A441C0FC59900C1E0F4 /* UserInfoTests.swift in Sources */,
+				6514F3151C1354F000E31DAD /* ClientMessageTests.swift in Sources */,
 				65443A321C0FB4F300C1E0F4 /* MessageIdTests.swift in Sources */,
 				65443A4E1C1067E300C1E0F4 /* LoginMessageTests.swift in Sources */,
 				65443A2E1C0FA62300C1E0F4 /* AccountMessageTests.swift in Sources */,

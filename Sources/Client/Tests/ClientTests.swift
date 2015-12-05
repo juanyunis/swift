@@ -29,9 +29,28 @@ extension TypeTestsType where TypeUnderTest: Encodable {
     }
 
     func encodedObjectForKey<T>(key: String) -> T? {
-        return target.encode()[key] as? T
+        return encodedObjectForKey(key) as? T
+    }
+}
+
+extension TypeTestsType where TypeUnderTest: ClientMessageType {
+
+    func encodedMessageName() -> String? {
+        return target.encode().keys.first
     }
 
+    func encodedPayload() -> Encoded? {
+        let encoded = target.encode()
+        return encoded[target.message.name] as? Encoded
+    }
+
+    func encodedObjectForKey(key: String) -> AnyObject? {
+        return encodedPayload()?[key]
+    }
+
+    func encodedObjectForKey<T>(key: String) -> T? {
+        return encodedObjectForKey(key) as? T
+    }
 }
 
 struct PublicInfo: Encodable {
