@@ -6,9 +6,10 @@
 //  Copyright © 2015 Tinode. All rights reserved.
 //
 
-public typealias Encoded = [String: AnyObject]
+typealias Encoded = [String: AnyObject]
+typealias EncodeBlock = () -> Encoded
 
-public protocol Encodable {
+protocol Encodable {
     func encode() -> Encoded
 }
 

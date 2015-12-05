@@ -8,29 +8,26 @@
 
 struct LoginMessage {
 
-    let id: MessageIdType?
+    let name: String
     let auth: AuthenticationSchemeType
-    let expireIn = "24h"
     let userAgent: UserAgentType?
 
-    init(id: MessageIdType? = .None, auth: AuthenticationSchemeType, userAgent: UserAgentType? = UserAgent()) {
-        self.id = id
+    init(name: String = "login", auth: AuthenticationSchemeType, userAgent: UserAgentType? = UserAgent()) {
+        self.name = name
         self.auth = auth
         self.userAgent = userAgent
     }
 
-    init(id: MessageIdType? = .None, basic: Authentication.Basic.UserPasswordPair, userAgent: UserAgentType? = UserAgent()) {
-        self.init(id: id, auth: Authentication.Basic(user: basic.user, password: basic.password), userAgent: userAgent)
+    init(basic: Authentication.Basic.UserPasswordPair, userAgent: UserAgentType? = UserAgent()) {
+        self.init(auth: Authentication.Basic(user: basic.user, password: basic.password), userAgent: userAgent)
     }
 }
 
-extension LoginMessage: ClientMessageType {
+extension LoginMessage: MessageType {
 
     func encode() -> Encoded {
         var result = [String: AnyObject]()
-        result += id?.encode()
         result += auth.encode()
-        result["expireIn"] = expireIn
         result += userAgent?.encode()
         return result
     }

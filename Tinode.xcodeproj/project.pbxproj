@@ -204,8 +204,7 @@
 		65443A451C1067AC00C1E0F4 /* Messages */ = {
 			isa = PBXGroup;
 			children = (
-				65443A211C0F9B8900C1E0F4 /* AccountMessage.swift */,
-				65443A461C1067C000C1E0F4 /* LoginMessage.swift */,
+				65443A591C107EEF00C1E0F4 /* Client */,
 			);
 			name = Messages;
 			sourceTree = "<group>";
@@ -217,6 +216,15 @@
 				65443A4B1C1067E300C1E0F4 /* LoginMessageTests.swift */,
 			);
 			name = "Message Tests";
+			sourceTree = "<group>";
+		};
+		65443A591C107EEF00C1E0F4 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				65443A211C0F9B8900C1E0F4 /* AccountMessage.swift */,
+				65443A461C1067C000C1E0F4 /* LoginMessage.swift */,
+			);
+			name = Client;
 			sourceTree = "<group>";
 		};
 		65E1861B1C0F5894005D891F = {

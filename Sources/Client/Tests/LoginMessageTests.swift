@@ -28,12 +28,6 @@ class LoginMessageEncodableTests: LoginMessageTests {
         XCTAssertNil(encodedObjectForKey("id"))
     }
 
-    func test__with_default_properties_has_expire_in() {
-        target = LoginMessage(basic: userPasswordPair)
-        let value: String? = encodedObjectForKey("expireIn")
-        XCTAssertEqual(value, "24h")
-    }
-
     func test__with_default_properties_has_user_agent() {
         target = LoginMessage(basic: userPasswordPair)
         let value: String? = encodedObjectForKey("ua")

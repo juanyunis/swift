@@ -23,20 +23,9 @@ class AccountMessageTests: XCTestCase, TypeTestsType {
 
 class AccountMessageEncodableTests: AccountMessageTests {
 
-    func test__with_default_properties_has_no_id() {
-        target = AccountMessage(basic: userPasswordPair)
-        XCTAssertNil(encodedObjectForKey("id"))
-    }
-
     func test__with_default_properties_has_no_context() {
         target = AccountMessage(basic: userPasswordPair)
         XCTAssertNil(encodedObjectForKey("user"))
-    }
-
-    func test__with_id() {
-        target = AccountMessage(id: id, basic: userPasswordPair)
-        let value: String? = encodedObjectForKey("id")
-        XCTAssertEqual(value, id.description)
     }
 
     func test__with_new_context() {

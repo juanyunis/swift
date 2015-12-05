@@ -12,24 +12,24 @@ struct AccountMessage {
         case New, Current
     }
 
-    let id: MessageIdType?
+    let name: String
     let context: Context
     let auth: AnySequence<AuthenticationSchemeType>
     let userInfo: UserInfo
 
-    init(id: MessageIdType? = .None, context: Context = .Current, auth: AnySequence<AuthenticationSchemeType>, userInfo: UserInfo) {
-        self.id = id
+    init(name: String = "acc", context: Context = .Current, auth: AnySequence<AuthenticationSchemeType>, userInfo: UserInfo) {
+        self.name = name
         self.context = context
         self.auth = auth
         self.userInfo = userInfo
     }
 
-    init(id: MessageIdType? = .None, context: Context = .Current, auth: AuthenticationSchemeType..., userInfo: UserInfo = UserInfo(publicInfo: .None, privateInfo: .None)) {
-        self.init(id: id, context: context, auth: AnySequence(auth), userInfo: userInfo)
+    init(context: Context = .Current, auth: AuthenticationSchemeType..., userInfo: UserInfo = UserInfo(publicInfo: .None, privateInfo: .None)) {
+        self.init(context: context, auth: AnySequence(auth), userInfo: userInfo)
     }
 
-    init(id: MessageIdType? = .None, context: Context = .Current, basic: Authentication.Basic.UserPasswordPair, userInfo: UserInfo = UserInfo(publicInfo: .None, privateInfo: .None)) {
-        self.init(id: id, context: context, auth: Authentication.Basic(user: basic.user, password: basic.password), userInfo: userInfo)
+    init(context: Context = .Current, basic: Authentication.Basic.UserPasswordPair, userInfo: UserInfo = UserInfo(publicInfo: .None, privateInfo: .None)) {
+        self.init(context: context, auth: Authentication.Basic(user: basic.user, password: basic.password), userInfo: userInfo)
     }
 }
 
@@ -45,11 +45,10 @@ extension AccountMessage.Context: Encodable {
     }
 }
 
-extension AccountMessage: ClientMessageType {
+extension AccountMessage: MessageType {
 
     func encode() -> Encoded {
         var result = [String: AnyObject]()
-        result += id?.encode()
         result += context.encode()
         result["auth"] = auth.map { $0.encode() }
         result["init"] = userInfo.encode()
