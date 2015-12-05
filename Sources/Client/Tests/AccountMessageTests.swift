@@ -28,6 +28,11 @@ class AccountMessageEncodableTests: AccountMessageTests {
         XCTAssertNil(encodedObjectForKey("user"))
     }
 
+    func test__message_name() {
+        target = AccountMessage(basic: userPasswordPair)
+        XCTAssertEqual(target.name, "acc")
+    }
+
     func test__with_new_context() {
         target = AccountMessage(context: .New, basic: userPasswordPair)
         let value: String? = encodedObjectForKey("user")

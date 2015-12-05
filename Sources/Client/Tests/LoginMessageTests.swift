@@ -28,6 +28,11 @@ class LoginMessageEncodableTests: LoginMessageTests {
         XCTAssertNil(encodedObjectForKey("id"))
     }
 
+    func test__message_name() {
+        target = LoginMessage(basic: userPasswordPair)
+        XCTAssertEqual(target.name, "login")
+    }
+
     func test__with_default_properties_has_user_agent() {
         target = LoginMessage(basic: userPasswordPair)
         let value: String? = encodedObjectForKey("ua")
