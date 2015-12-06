@@ -20,6 +20,10 @@
 		6514F3131C1354F000E31DAD /* ClientMessageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6514F3121C1354F000E31DAD /* ClientMessageTests.swift */; };
 		6514F3141C1354F000E31DAD /* ClientMessageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6514F3121C1354F000E31DAD /* ClientMessageTests.swift */; };
 		6514F3151C1354F000E31DAD /* ClientMessageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6514F3121C1354F000E31DAD /* ClientMessageTests.swift */; };
+		651B04D51C137F4400C051ED /* WebSocketType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651B04D41C137F4400C051ED /* WebSocketType.swift */; };
+		651B04D61C137F4400C051ED /* WebSocketType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651B04D41C137F4400C051ED /* WebSocketType.swift */; };
+		651B04D71C137F4400C051ED /* WebSocketType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651B04D41C137F4400C051ED /* WebSocketType.swift */; };
+		651B04D81C137F4400C051ED /* WebSocketType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651B04D41C137F4400C051ED /* WebSocketType.swift */; };
 		65443A0F1C0F724000C1E0F4 /* Decodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65443A0E1C0F724000C1E0F4 /* Decodable.framework */; };
 		65443A111C0F726900C1E0F4 /* Decodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65443A101C0F726900C1E0F4 /* Decodable.framework */; };
 		65443A131C0F727900C1E0F4 /* Decodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65443A121C0F727900C1E0F4 /* Decodable.framework */; };
@@ -121,6 +125,7 @@
 		6509A2D31C13685E00B39DE5 /* ResponseMessageTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseMessageTests.swift; sourceTree = "<group>"; };
 		6509A2D71C1368BE00B39DE5 /* DateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTests.swift; sourceTree = "<group>"; };
 		6514F3121C1354F000E31DAD /* ClientMessageTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientMessageTests.swift; sourceTree = "<group>"; };
+		651B04D41C137F4400C051ED /* WebSocketType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocketType.swift; sourceTree = "<group>"; };
 		65443A0E1C0F724000C1E0F4 /* Decodable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Decodable.framework; path = Carthage/Build/iOS/Decodable.framework; sourceTree = "<group>"; };
 		65443A101C0F726900C1E0F4 /* Decodable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Decodable.framework; path = Carthage/Build/watchOS/Decodable.framework; sourceTree = "<group>"; };
 		65443A121C0F727900C1E0F4 /* Decodable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Decodable.framework; path = Carthage/Build/tvOS/Decodable.framework; sourceTree = "<group>"; };
@@ -299,6 +304,7 @@
 				65E1869F1C0F5C33005D891F /* Tinode.swift */,
 				65443A3C1C0FC3D000C1E0F4 /* UserInfo.swift */,
 				65443A501C1071B200C1E0F4 /* UserAgent.swift */,
+				651B04D41C137F4400C051ED /* WebSocketType.swift */,
 			);
 			name = Shared;
 			path = Sources/Client/Shared;
@@ -686,6 +692,7 @@
 				65443A471C1067C000C1E0F4 /* LoginMessage.swift in Sources */,
 				65443A511C1071B200C1E0F4 /* UserAgent.swift in Sources */,
 				65443A181C0F8D9800C1E0F4 /* MessageType.swift in Sources */,
+				651B04D51C137F4400C051ED /* WebSocketType.swift in Sources */,
 				65443A3D1C0FC3D000C1E0F4 /* UserInfo.swift in Sources */,
 				65443A271C0F9ECA00C1E0F4 /* MessageId.swift in Sources */,
 				65443A341C0FB80300C1E0F4 /* Authenticaton.swift in Sources */,
@@ -720,6 +727,7 @@
 				65443A481C1067C000C1E0F4 /* LoginMessage.swift in Sources */,
 				65443A521C1071B200C1E0F4 /* UserAgent.swift in Sources */,
 				65443A191C0F8D9800C1E0F4 /* MessageType.swift in Sources */,
+				651B04D61C137F4400C051ED /* WebSocketType.swift in Sources */,
 				65443A3E1C0FC3D000C1E0F4 /* UserInfo.swift in Sources */,
 				65443A281C0F9ECA00C1E0F4 /* MessageId.swift in Sources */,
 				65443A351C0FB80300C1E0F4 /* Authenticaton.swift in Sources */,
@@ -737,6 +745,7 @@
 				65443A491C1067C000C1E0F4 /* LoginMessage.swift in Sources */,
 				65443A531C1071B200C1E0F4 /* UserAgent.swift in Sources */,
 				65443A1A1C0F8D9800C1E0F4 /* MessageType.swift in Sources */,
+				651B04D71C137F4400C051ED /* WebSocketType.swift in Sources */,
 				65443A3F1C0FC3D000C1E0F4 /* UserInfo.swift in Sources */,
 				65443A291C0F9ECA00C1E0F4 /* MessageId.swift in Sources */,
 				65443A361C0FB80300C1E0F4 /* Authenticaton.swift in Sources */,
@@ -771,6 +780,7 @@
 				65443A4A1C1067C000C1E0F4 /* LoginMessage.swift in Sources */,
 				65443A541C1071B200C1E0F4 /* UserAgent.swift in Sources */,
 				65443A1B1C0F8D9800C1E0F4 /* MessageType.swift in Sources */,
+				651B04D81C137F4400C051ED /* WebSocketType.swift in Sources */,
 				65443A401C0FC3D000C1E0F4 /* UserInfo.swift in Sources */,
 				65443A2A1C0F9ECA00C1E0F4 /* MessageId.swift in Sources */,
 				65443A371C0FB80300C1E0F4 /* Authenticaton.swift in Sources */,
