@@ -117,12 +117,5 @@ class AccountMessageEncodableTests: AccountMessageTests {
     }
 }
 
-class AccountMessageEncodableDataTests: AccountMessageTests {
-
-    func test__json_data() {
-
-    }
-}
-
 
 
