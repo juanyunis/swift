@@ -1,2 +1,2 @@
 github "Anviking/Decodable" "v0.3.3"
-github "tidwall/SwiftWebSocket" "v2.3.0"
+github "danthorpe/SwiftWebSocket" "345dbfdbf475687a557a77cc91eb6714e22b0020"

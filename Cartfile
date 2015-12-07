@@ -1,2 +1,2 @@
-github "tidwall/SwiftWebSocket"
+github "danthorpe/SwiftWebSocket" "SWS-9_websockettype_protocol"
 github "Anviking/Decodable"
