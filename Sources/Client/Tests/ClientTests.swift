@@ -31,12 +31,24 @@ extension TypeTestsType where TypeUnderTest: Encodable {
     func encodedObjectForKey<T>(key: String) -> T? {
         return encodedObjectForKey(key) as? T
     }
+
+    func decodedObjectForKey(key: String) -> AnyObject? {
+        return try! target.decoded()?[key]
+    }
+
+    func decodedObjectForKey<T>(key: String) -> T? {
+        return decodedObjectForKey(key) as? T
+    }
 }
 
 extension TypeTestsType where TypeUnderTest: ClientMessageType {
 
     func encodedMessageName() -> String? {
         return target.encode().keys.first
+    }
+
+    func decodedMessageName() throws -> String? {
+        return try target.decoded()?.keys.first
     }
 
     func encodedPayload() -> Encoded? {

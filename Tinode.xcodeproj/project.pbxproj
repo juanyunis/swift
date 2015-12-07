@@ -82,6 +82,11 @@
 		65443A561C10729700C1E0F4 /* UserAgentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A551C10729700C1E0F4 /* UserAgentTests.swift */; };
 		65443A571C10729700C1E0F4 /* UserAgentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A551C10729700C1E0F4 /* UserAgentTests.swift */; };
 		65443A581C10729700C1E0F4 /* UserAgentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65443A551C10729700C1E0F4 /* UserAgentTests.swift */; };
+		656365621C16443D00F6D1DC /* ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656365611C16443D00F6D1DC /* ExtensionTests.swift */; };
+		656365631C16443D00F6D1DC /* ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656365611C16443D00F6D1DC /* ExtensionTests.swift */; };
+		656365641C16443D00F6D1DC /* ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656365611C16443D00F6D1DC /* ExtensionTests.swift */; };
+		65A20B301C16215900C7393D /* SwiftTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65A20B2F1C16215900C7393D /* SwiftTask.framework */; };
+		65A20B321C1632D600C7393D /* SwiftTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65A20B311C1632D600C7393D /* SwiftTask.framework */; };
 		65E186321C0F58FC005D891F /* Tinode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E186271C0F58FC005D891F /* Tinode.framework */; };
 		65E1865B1C0F5924005D891F /* Tinode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E186511C0F5923005D891F /* Tinode.framework */; };
 		65E186771C0F5930005D891F /* Tinode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E1866D1C0F592F005D891F /* Tinode.framework */; };
@@ -148,6 +153,9 @@
 		65443A4B1C1067E300C1E0F4 /* LoginMessageTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginMessageTests.swift; sourceTree = "<group>"; };
 		65443A501C1071B200C1E0F4 /* UserAgent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAgent.swift; sourceTree = "<group>"; };
 		65443A551C10729700C1E0F4 /* UserAgentTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAgentTests.swift; sourceTree = "<group>"; };
+		656365611C16443D00F6D1DC /* ExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionTests.swift; sourceTree = "<group>"; };
+		65A20B2F1C16215900C7393D /* SwiftTask.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftTask.framework; path = Carthage/Build/iOS/SwiftTask.framework; sourceTree = "<group>"; };
+		65A20B311C1632D600C7393D /* SwiftTask.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftTask.framework; path = Carthage/Build/Mac/SwiftTask.framework; sourceTree = "<group>"; };
 		65E186271C0F58FC005D891F /* Tinode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Tinode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		65E186311C0F58FC005D891F /* iOS ClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS ClientTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65E186441C0F5912005D891F /* Tinode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Tinode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,6 +180,7 @@
 			files = (
 				65443A0F1C0F724000C1E0F4 /* Decodable.framework in Frameworks */,
 				65E186A51C0F6DBC005D891F /* SwiftWebSocket.framework in Frameworks */,
+				65A20B301C16215900C7393D /* SwiftTask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +220,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65A20B321C1632D600C7393D /* SwiftTask.framework in Frameworks */,
 				651B04E21C15CAA700C051ED /* SwiftWebSocket.framework in Frameworks */,
 				65443A161C0F72AD00C1E0F4 /* Decodable.framework in Frameworks */,
 			);
@@ -335,6 +345,7 @@
 				6509A2D71C1368BE00B39DE5 /* DateTests.swift */,
 				65443A2F1C0FB4F300C1E0F4 /* MessageIdTests.swift */,
 				651B04DE1C15C01700C051ED /* NetworkTests.swift */,
+				656365611C16443D00F6D1DC /* ExtensionTests.swift */,
 				65443A551C10729700C1E0F4 /* UserAgentTests.swift */,
 				65443A411C0FC59900C1E0F4 /* UserInfoTests.swift */,
 				65443A4F1C1067ED00C1E0F4 /* Message Tests */,
@@ -346,6 +357,8 @@
 		65E186A81C0F6DD3005D891F /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				65A20B311C1632D600C7393D /* SwiftTask.framework */,
+				65A20B2F1C16215900C7393D /* SwiftTask.framework */,
 				65443A151C0F72AD00C1E0F4 /* Decodable.framework */,
 				65443A121C0F727900C1E0F4 /* Decodable.framework */,
 				65443A101C0F726900C1E0F4 /* Decodable.framework */,
@@ -641,6 +654,7 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/Mac/SwiftWebSocket.framework",
 				"$(SRCROOT)/Carthage/Build/Mac/Decodable.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/SwiftTask.framework",
 			);
 			name = "Carthage Copy Frameworks";
 			outputPaths = (
@@ -658,6 +672,7 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftWebSocket.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Decodable.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftTask.framework",
 			);
 			name = "Carthage Copy Frameworks";
 			outputPaths = (
@@ -710,6 +725,7 @@
 			files = (
 				65E1869E1C0F5B83005D891F /* ClientTests.swift in Sources */,
 				6509A2D41C13685E00B39DE5 /* ResponseMessageTests.swift in Sources */,
+				656365621C16443D00F6D1DC /* ExtensionTests.swift in Sources */,
 				65443A421C0FC59900C1E0F4 /* UserInfoTests.swift in Sources */,
 				6514F3131C1354F000E31DAD /* ClientMessageTests.swift in Sources */,
 				65443A301C0FB4F300C1E0F4 /* MessageIdTests.swift in Sources */,
@@ -764,6 +780,7 @@
 			files = (
 				65E1869D1C0F5B81005D891F /* ClientTests.swift in Sources */,
 				6509A2D51C13685E00B39DE5 /* ResponseMessageTests.swift in Sources */,
+				656365631C16443D00F6D1DC /* ExtensionTests.swift in Sources */,
 				65443A431C0FC59900C1E0F4 /* UserInfoTests.swift in Sources */,
 				6514F3141C1354F000E31DAD /* ClientMessageTests.swift in Sources */,
 				65443A311C0FB4F300C1E0F4 /* MessageIdTests.swift in Sources */,
@@ -800,6 +817,7 @@
 			files = (
 				65E1869C1C0F5B81005D891F /* ClientTests.swift in Sources */,
 				6509A2D61C13685E00B39DE5 /* ResponseMessageTests.swift in Sources */,
+				656365641C16443D00F6D1DC /* ExtensionTests.swift in Sources */,
 				65443A441C0FC59900C1E0F4 /* UserInfoTests.swift in Sources */,
 				6514F3151C1354F000E31DAD /* ClientMessageTests.swift in Sources */,
 				65443A321C0FB4F300C1E0F4 /* MessageIdTests.swift in Sources */,

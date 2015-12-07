@@ -26,6 +26,7 @@ class AccountMessageEncodableTests: AccountMessageTests {
     func test__with_default_properties_has_no_context() {
         target = AccountMessage(basic: userPasswordPair)
         XCTAssertNil(encodedObjectForKey("user"))
+        XCTAssertNil(decodedObjectForKey("user"))
     }
 
     func test__message_name() {
@@ -35,8 +36,10 @@ class AccountMessageEncodableTests: AccountMessageTests {
 
     func test__with_new_context() {
         target = AccountMessage(context: .New, basic: userPasswordPair)
-        let value: String? = encodedObjectForKey("user")
-        XCTAssertEqual(value, "new")
+        let encodedValue: String? = encodedObjectForKey("user")
+        XCTAssertEqual(encodedValue, "new")
+        let decodedValue: String? = decodedObjectForKey("user")
+        XCTAssertEqual(decodedValue, "new")
     }
 
     func test__with_basic_auth() {
@@ -113,3 +116,13 @@ class AccountMessageEncodableTests: AccountMessageTests {
         }
     }
 }
+
+class AccountMessageEncodableDataTests: AccountMessageTests {
+
+    func test__json_data() {
+
+    }
+}
+
+
+

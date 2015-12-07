@@ -10,6 +10,10 @@ import XCTest
 import SwiftWebSocket
 @testable import Tinode
 
+struct TestableNetworkConfiguration: NetworkConfigurationType {
+    static let createRandomString = { return "testing_not_random" }
+}
+
 final class TestableWebSocket: WebSocketType {
 
     var didOpenWithRequest: NSURLRequest? = .None
@@ -17,9 +21,7 @@ final class TestableWebSocket: WebSocketType {
 
     var didSendMessage: Any? = .None
 
-    init() {
-
-    }
+    init() { }
 
     func open(request: NSURLRequest, subProtocols: [String] = []) {
         didOpenWithRequest = request
@@ -31,7 +33,7 @@ final class TestableWebSocket: WebSocketType {
     }
 }
 
-typealias TestableNetwork = _Network<TestableWebSocket>
+typealias TestableNetwork = _Network<TestableWebSocket, TestableNetworkConfiguration>
 
 class NetworkTests: XCTestCase {
 
@@ -48,11 +50,55 @@ class NetworkTests: XCTestCase {
         network = nil
         super.tearDown()
     }
+
+    func didSendData() -> NSData? {
+        return network.websocket.didSendMessage as? NSData
+    }
+
+    func decodedSentData() throws -> Encoded? {
+        return try didSendData().map { try NSJSONSerialization.JSONObjectWithData($0, options: []) as? Encoded } ?? .None
+    }
 }
 
 class NetworkInitializationTests: NetworkTests {
 
+    func test__default_host_is_set() {
+        XCTAssertEqual(network.host, "api.tinode.co")
+    }
+
     func test__api_is_set() {
         XCTAssertEqual(network.api, api)
     }
+
+    func test__id_is_set() {
+        let id = network.id.next()
+        XCTAssertNotNil(id)
+        XCTAssertEqual(id!.description, "testing_not_random1")
+    }
 }
+
+class NetworkSendTests: NetworkTests {
+
+    func test__write_payload_returns_client_message() {
+        let payload = AccountMessage(basic: ("user", "password"))
+        let message = network.write(payload)
+        XCTAssertEqual(message.id?.description, "testing_not_random1")
+    }
+
+    func test__write_payload_to_socket() {
+        let payload = AccountMessage(basic: ("user", "password"))
+        let message = network.write(payload)
+        do {
+            try network.send(message)
+            guard let sent = try decodedSentData() else {
+                XCTFail("Data not sent to websocket")
+                return
+            }
+            XCTAssertEqual(sent.keys.first, "acc")
+        }
+        catch {
+            XCTFail("Unexpected error: \(error)")
+        }
+    }
+}
+
