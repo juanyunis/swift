@@ -31,3 +31,19 @@ internal extension NSDate {
         return __rfc3339DateFormatter.stringFromDate(self)
     }
 }
+
+internal extension String {
+
+    static func random(length: Int = 6, from allowedChars: String = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/") -> String {
+        let allowedCharsCount = UInt32(allowedChars.characters.count)
+        var result = ""
+
+        for _ in 0..<length {
+            let randomNum = Int(arc4random_uniform(allowedCharsCount))
+            let newCharacter = allowedChars[allowedChars.startIndex.advancedBy(randomNum)]
+            result += String(newCharacter)
+        }
+        
+        return result
+    }
+}

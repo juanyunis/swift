@@ -40,16 +40,16 @@ func ==(lhs: MessageId, rhs: MessageId) -> Bool {
     return lhs.description == rhs.description
 }
 
-struct IncrementalMessageId: Equatable, IntegerLiteralConvertible, MessageIdType {
+struct NumericalMessageId: Equatable, IntegerLiteralConvertible, MessageIdType {
 
     let prefix: String
-    private(set) var current: Int
+    let current: Int
 
     var description: String {
         return "\(prefix)\(current)"
     }
 
-    init(_ value: Int, prefix: String? = .None) {
+    init(_ value: Int = 0, prefix: String? = .None) {
         self.current = value
         self.prefix = prefix ?? ""
     }
@@ -59,15 +59,13 @@ struct IncrementalMessageId: Equatable, IntegerLiteralConvertible, MessageIdType
     }
 }
 
-func ==(lhs: IncrementalMessageId, rhs: IncrementalMessageId) -> Bool {
+extension NumericalMessageId: GeneratorType {
+
+    func next() -> NumericalMessageId? {
+        return NumericalMessageId(current + 1, prefix: prefix)
+    }
+}
+
+func ==(lhs: NumericalMessageId, rhs: NumericalMessageId) -> Bool {
     return lhs.current == rhs.current && lhs.prefix == rhs.prefix
 }
-
-postfix func ++(inout x: IncrementalMessageId) -> IncrementalMessageId {
-    return IncrementalMessageId(x.current++, prefix: x.prefix)
-}
-
-prefix func ++(inout x: IncrementalMessageId) -> IncrementalMessageId {
-    return IncrementalMessageId(++x.current, prefix: x.prefix)
-}
-

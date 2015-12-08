@@ -1,2 +1,3 @@
 github "Anviking/Decodable" "v0.3.3"
-github "tidwall/SwiftWebSocket" "v2.3.0"
+github "ReactKit/SwiftTask" "d9f219116a7c769be044a6d4396f75d655d5c15d"
+github "danthorpe/SwiftWebSocket" "345dbfdbf475687a557a77cc91eb6714e22b0020"
