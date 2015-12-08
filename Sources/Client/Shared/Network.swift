@@ -20,6 +20,10 @@ struct NetworkConfiguration: NetworkConfigurationType {
     static let createRandomString = { return String.random() }
 }
 
+enum NetworkError: ErrorType {
+    case IncompleteURLComponents(NSURLComponents)
+}
+
 class _Network<WebSocket: WebSocketType, Configuration: NetworkConfigurationType> {
 
     let host: String
@@ -38,6 +42,21 @@ class _Network<WebSocket: WebSocketType, Configuration: NetworkConfigurationType
 
         self.websocket = WebSocket()
     }
+
+    func createURLRequest() throws -> NSURLRequest {
+        let components = NSURLComponents()
+        components.scheme = "wss"
+        components.host = host
+        components.path = "/v0/channels"
+        let request = NSMutableURLRequest(URL: components.URL!)
+        request.addValue(api, forHTTPHeaderField: "X-Tinode-APIKey")
+        return request
+    }
+
+    func connect() {
+        let request = try! createURLRequest()
+        self.websocket.open(request, subProtocols: [])
+    }
 }
 
 typealias Network = _Network<WebSocket, NetworkConfiguration>
@@ -45,8 +64,6 @@ typealias Network = _Network<WebSocket, NetworkConfiguration>
 extension _Network {
 
     func send(message: ClientMessageType) throws {
-        // TODO: SwiftWebSocket's public API is `Any` but... that can't be
-        // correct.
         try websocket.send(message.asJSONData())
     }
 

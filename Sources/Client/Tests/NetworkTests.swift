@@ -77,6 +77,28 @@ class NetworkInitializationTests: NetworkTests {
     }
 }
 
+class NetworkConnectionTests: NetworkTests {
+
+    func test__created_url_request() {
+        do {
+            let request = try network.createURLRequest()
+            XCTAssertEqual(request.URL?.absoluteString, "wss://api.tinode.co/v0/channels")
+            XCTAssertEqual(request.allHTTPHeaderFields?["X-Tinode-APIKey"], network.api)
+        }
+        catch { XCTFail("Unexpected error: \(error)") }
+    }
+
+    func test__connection() {
+        network.connect()
+        guard let didOpenRequest = network.websocket.didOpenWithRequest else {
+            XCTFail("WebSocket did not receive open request.")
+            return
+        }
+        XCTAssertEqual(didOpenRequest.URL?.absoluteString, "wss://api.tinode.co/v0/channels")
+        XCTAssertEqual(didOpenRequest.allHTTPHeaderFields?["X-Tinode-APIKey"], network.api)
+    }
+}
+
 class NetworkSendTests: NetworkTests {
 
     func test__write_payload_returns_client_message() {
@@ -101,4 +123,5 @@ class NetworkSendTests: NetworkTests {
         }
     }
 }
+
 
