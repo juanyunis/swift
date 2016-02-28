@@ -544,7 +544,7 @@
 			attributes = {
 				CLASSPREFIX = TND;
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = Tinode;
 				TargetAttributes = {
 					65E186261C0F58FC005D891F = {
@@ -576,6 +576,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 65E1861B1C0F5894005D891F;
 			productRefGroup = 65E186281C0F58FC005D891F /* Products */;
@@ -854,6 +855,8 @@
 		65E186201C0F5894005D891F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				ONLY_ACTIVE_ARCH = YES;
 			};
 			name = Debug;
 		};
