@@ -664,6 +664,7 @@
 				"$(SRCROOT)/Carthage/Build/Mac/SwiftWebSocket.framework",
 				"$(SRCROOT)/Carthage/Build/Mac/Decodable.framework",
 				"$(SRCROOT)/Carthage/Build/Mac/SwiftTask.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/Operations.framework",
 			);
 			name = "Carthage Copy Frameworks";
 			outputPaths = (
@@ -682,6 +683,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftWebSocket.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Decodable.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftTask.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Operations.framework",
 			);
 			name = "Carthage Copy Frameworks";
 			outputPaths = (
@@ -879,6 +881,7 @@
 			baseConfigurationReference = 65E186891C0F5995005D891F /* Client.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -939,6 +942,7 @@
 			baseConfigurationReference = 65E186891C0F5995005D891F /* Client.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;

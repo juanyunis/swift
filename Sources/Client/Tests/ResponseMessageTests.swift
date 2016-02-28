@@ -29,9 +29,14 @@ class DecodableResponseMessageTests: ResponseMessageTests {
                 "ts": "2015-10-06T18:07:29.841Z"
             ]
         ]
-        let response = try! ResponseMessage.decode(json)
-        XCTAssertEqual(response.code, 200)
-        XCTAssertEqual(response.text, "OK")
+        do {
+            let response = try ResponseMessage.decode(json)
+            XCTAssertEqual(response.code, 200)
+            XCTAssertEqual(response.text, "OK")
+        }
+        catch {
+            XCTFail("Unexpectedly failed with error: \(error)")
+        }
     }
 
     func test__optional_properties_are_decoded() {
@@ -46,11 +51,15 @@ class DecodableResponseMessageTests: ResponseMessageTests {
                 ]
             ]
         ]
-        let response = try! ResponseMessage.decode(json)
-        XCTAssertEqual(response.code, 200)
-        XCTAssertEqual(response.text, "OK")
-        XCTAssertEqual(response.topic, "testing topic")
-        XCTAssertEqual(response.parameterForKey("foo"), "bar")
+        do {
+            let response = try ResponseMessage.decode(json)
+            XCTAssertEqual(response.code, 200)
+            XCTAssertEqual(response.text, "OK")
+            XCTAssertEqual(response.topic, "testing topic")
+            XCTAssertEqual(response.parameterForKey("foo"), "bar")
+        }
+        catch {
+            XCTFail("Unexpectedly failed with error: \(error)")
+        }
     }
-
 }

@@ -42,8 +42,8 @@ extension ResponseMessage: ServerPayloadType {
             code: payload => "code",
             text: payload => "text",
             timestamp: NSDate.fromRFC3339FormattedString(payload => "ts")!,
-            topic: try? payload => "topic",
-            parameters: try payload => "params"
+            topic: payload =>? "topic",
+            parameters: payload =>? "params"
         )
     }
 }
