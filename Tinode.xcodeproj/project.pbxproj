@@ -87,6 +87,8 @@
 		656365641C16443D00F6D1DC /* ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656365611C16443D00F6D1DC /* ExtensionTests.swift */; };
 		65A20B301C16215900C7393D /* SwiftTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65A20B2F1C16215900C7393D /* SwiftTask.framework */; };
 		65A20B321C1632D600C7393D /* SwiftTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65A20B311C1632D600C7393D /* SwiftTask.framework */; };
+		65B13FB01C83208500AA0E11 /* Operations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65B13FAF1C83208500AA0E11 /* Operations.framework */; };
+		65B145A71C83210100AA0E11 /* Operations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65B145A61C83210100AA0E11 /* Operations.framework */; };
 		65E186321C0F58FC005D891F /* Tinode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E186271C0F58FC005D891F /* Tinode.framework */; };
 		65E1865B1C0F5924005D891F /* Tinode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E186511C0F5923005D891F /* Tinode.framework */; };
 		65E186771C0F5930005D891F /* Tinode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E1866D1C0F592F005D891F /* Tinode.framework */; };
@@ -156,6 +158,8 @@
 		656365611C16443D00F6D1DC /* ExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionTests.swift; sourceTree = "<group>"; };
 		65A20B2F1C16215900C7393D /* SwiftTask.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftTask.framework; path = Carthage/Build/iOS/SwiftTask.framework; sourceTree = "<group>"; };
 		65A20B311C1632D600C7393D /* SwiftTask.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftTask.framework; path = Carthage/Build/Mac/SwiftTask.framework; sourceTree = "<group>"; };
+		65B13FAF1C83208500AA0E11 /* Operations.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Operations.framework; path = Carthage/Build/iOS/Operations.framework; sourceTree = "<group>"; };
+		65B145A61C83210100AA0E11 /* Operations.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Operations.framework; path = Carthage/Build/Mac/Operations.framework; sourceTree = "<group>"; };
 		65E186271C0F58FC005D891F /* Tinode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Tinode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		65E186311C0F58FC005D891F /* iOS ClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS ClientTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65E186441C0F5912005D891F /* Tinode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Tinode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,6 +182,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65B13FB01C83208500AA0E11 /* Operations.framework in Frameworks */,
 				65443A0F1C0F724000C1E0F4 /* Decodable.framework in Frameworks */,
 				65E186A51C0F6DBC005D891F /* SwiftWebSocket.framework in Frameworks */,
 				65A20B301C16215900C7393D /* SwiftTask.framework in Frameworks */,
@@ -220,6 +225,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65B145A71C83210100AA0E11 /* Operations.framework in Frameworks */,
 				65A20B321C1632D600C7393D /* SwiftTask.framework in Frameworks */,
 				651B04E21C15CAA700C051ED /* SwiftWebSocket.framework in Frameworks */,
 				65443A161C0F72AD00C1E0F4 /* Decodable.framework in Frameworks */,
@@ -357,12 +363,14 @@
 		65E186A81C0F6DD3005D891F /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				65A20B311C1632D600C7393D /* SwiftTask.framework */,
-				65A20B2F1C16215900C7393D /* SwiftTask.framework */,
 				65443A151C0F72AD00C1E0F4 /* Decodable.framework */,
 				65443A121C0F727900C1E0F4 /* Decodable.framework */,
 				65443A101C0F726900C1E0F4 /* Decodable.framework */,
 				65443A0E1C0F724000C1E0F4 /* Decodable.framework */,
+				65B145A61C83210100AA0E11 /* Operations.framework */,
+				65B13FAF1C83208500AA0E11 /* Operations.framework */,
+				65A20B311C1632D600C7393D /* SwiftTask.framework */,
+				65A20B2F1C16215900C7393D /* SwiftTask.framework */,
 				65E186A61C0F6DCE005D891F /* SwiftWebSocket.framework */,
 				65E186A41C0F6DBC005D891F /* SwiftWebSocket.framework */,
 			);

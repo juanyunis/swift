@@ -1,3 +1,4 @@
-github "danthorpe/SwiftWebSocket" "SWS-9_websockettype_protocol"
 github "Anviking/Decodable"
+github "danthorpe/SwiftWebSocket" "SWS-9_websockettype_protocol"
+github "danthorpe/Operations" "development"
 github "ReactKit/SwiftTask" "swift/2.0"

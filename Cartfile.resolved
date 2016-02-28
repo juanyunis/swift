@@ -1,3 +1,4 @@
-github "Anviking/Decodable" "v0.3.3"
-github "ReactKit/SwiftTask" "d9f219116a7c769be044a6d4396f75d655d5c15d"
+github "Anviking/Decodable" "v0.4.1"
+github "danthorpe/Operations" "ff3d22d3eda5797b452023b0e564bed0ddd27d4c"
+github "ReactKit/SwiftTask" "da6438b7d5b481221fe83bf2b28f236556e19142"
 github "danthorpe/SwiftWebSocket" "345dbfdbf475687a557a77cc91eb6714e22b0020"
